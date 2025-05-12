@@ -1,0 +1,5 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="25" cy="25" r="23" stroke="#333" stroke-width="2"/>
+    <path d="M15 20L25 15L35 20V30L25 35L15 30V20Z" fill="#4a6eb5" stroke="#333"/>
+    <text x="25" y="27" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">BLOG</text>
+</svg>

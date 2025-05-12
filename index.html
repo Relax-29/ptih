@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Insights Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="#" data-section="home">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                        <circle cx="25" cy="25" r="23" stroke="#333" stroke-width="2"/>
+                        <path d="M15 20L25 15L35 20V30L25 35L15 30V20Z" fill="#4a6eb5" stroke="#333"/>
+                        <text x="25" y="27" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">BLOG</text>
+                    </svg>
+                    <span>Tech Insights</span>
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active" data-section="home">Home</a></li>
+                    <li><a href="#" data-section="about">About</a></li>
+                    <li><a href="#" data-section="contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Welcome to Tech Insights</h1>
+                <p>Exploring the latest trends and innovations in technology</p>
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search blog posts...">
+                    <button id="search-button"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-section" id="blogs-container">
+            <div class="container">
+                <h2>Latest Posts</h2>
+                <div class="blog-posts-wrapper">
+                    <div class="blog-posts" id="blog-posts">
+                        <!-- Blog posts will be dynamically loaded here -->
+                    </div>
+                    <aside class="sidebar">
+                        <div class="categories">
+                            <h3>Categories</h3>
+                            <ul>
+                                <li><a href="#" data-category="all" class="active">All Posts</a></li>
+                                <li><a href="#" data-category="web-development">Web Development</a></li>
+                                <li><a href="#" data-category="artificial-intelligence">Artificial Intelligence</a></li>
+                                <li><a href="#" data-category="cybersecurity">Cybersecurity</a></li>
+                            </ul>
+                        </div>
+                        <div class="popular-posts">
+                            <h3>Popular Posts</h3>
+                            <div class="popular-post">
+                                <a href="#" class="popular-post-link" data-post-id="1">
+                                    <h4>The Future of Web Development</h4>
+                                    <div class="meta">
+                                        <span><i class="far fa-calendar"></i> June 15, 2023</span>
+                                        <span><i class="far fa-comment"></i> 24 Comments</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="popular-post">
+                                <a href="#" class="popular-post-link" data-post-id="2">
+                                    <h4>AI and Machine Learning Trends</h4>
+                                    <div class="meta">
+                                        <span><i class="far fa-calendar"></i> July 2, 2023</span>
+                                        <span><i class="far fa-comment"></i> 18 Comments</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="popular-post">
+                                <a href="#" class="popular-post-link" data-post-id="3">
+                                    <h4>Cybersecurity Best Practices</h4>
+                                    <div class="meta">
+                                        <span><i class="far fa-calendar"></i> July 20, 2023</span>
+                                        <span><i class="far fa-comment"></i> 12 Comments</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-detail" id="blog-detail">
+            <div class="container">
+                <div class="back-to-blogs">
+                    <a href="#" id="back-button"><i class="fas fa-arrow-left"></i> Back to posts</a>
+                </div>
+                <article class="blog-post-detail" id="blog-post-detail">
+                    <!-- Blog post detail will be dynamically loaded here -->
+                </article>
+                <div class="comment-section">
+                    <h3>Leave a Comment</h3>
+                    <form id="comment-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Comment</label>
+                            <textarea id="comment" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Submit Comment</button>
+                    </form>
+                    <div class="comments-container">
+                        <h3>Comments (<span id="comment-count">0</span>)</h3>
+                        <div id="comments-list">
+                            <!-- Comments will be dynamically loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <div class="container">
+                <h2>About Tech Insights</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Tech Insights is a blog dedicated to bringing you the latest news, trends, and insights from the world of technology. I am passionate about exploring new developments in web development, artificial intelligence, cybersecurity, and more.</p>
+                        <p>Founded in 2023, I strive to provide clear, concise, and engaging content that helps both tech enthusiasts and newcomers understand the ever-evolving technological landscape.</p>
+                    </div>
+                    <div class="team">
+                        <h3>About the Developer</h3>
+                        <div class="developer-profile">
+                            <div class="profile-image">
+                                <img src="assets/profile/user-profile.png" alt="Mohit Kumar profile picture">
+                            </div>
+                            <div class="profile-details">
+                                <h4>Mohit Kumar</h4>
+                                <p class="profile-title">Professional Frontend Developer</p>
+                                <p class="profile-bio">I'm a passionate frontend developer with expertise in HTML, CSS, and JavaScript. I create responsive and user-friendly web experiences while staying up-to-date with the latest technology trends.</p>
+                                <div class="profile-links">
+                                    <p>Connect with me:</p>
+                                    <div class="social-icons">
+                                        <a href="https://github.com/Relax-29" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                                        <a href="https://www.linkedin.com/in/rerelax/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                                        <a href="https://www.instagram.com/re.relax_/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://x.com/Relax29hj" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-form">
+                        <h3>Send us a message</h3>
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="contact-name">Name</label>
+                                <input type="text" id="contact-name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-subject">Subject</label>
+                                <input type="text" id="contact-subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message">Message</label>
+                                <textarea id="contact-message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <p>relax9690@gmail.com</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <p>+91 8332343354</p>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Civil Lines, Jhansi, Uttar Pradesh 284001</p>
+                        </div>
+                        <div class="social-media">
+                            <h3>Follow Us</h3>
+                            <div class="social-icons">
+                                <a href="https://x.com/Relax29hj" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                                <a href="https://github.com/Relax-29" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                                <a href="https://www.instagram.com/re.relax_/" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/rerelax/" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" data-section="home">
+                        <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
+                            <circle cx="25" cy="25" r="23" stroke="#fff" stroke-width="2"/>
+                            <path d="M15 20L25 15L35 20V30L25 35L15 30V20Z" fill="#4a6eb5" stroke="#fff"/>
+                            <text x="25" y="27" font-family="Arial" font-size="8" fill="#fff" text-anchor="middle">BLOG</text>
+                        </svg>
+                        <span>Tech Insights</span>
+                    </a>
+                </div>
+                <div class="footer-nav">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" data-section="home">Home</a></li>
+                        <li><a href="#" data-section="about">About</a></li>
+                        <li><a href="#" data-section="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-categories">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#" data-category="web-development">Web Development</a></li>
+                        <li><a href="#" data-category="artificial-intelligence">Artificial Intelligence</a></li>
+                        <li><a href="#" data-category="cybersecurity">Cybersecurity</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h3>Subscribe to our newsletter</h3>
+                    <form id="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                    <div id="newsletter-success" class="success-message" style="display: none;">
+                        Thank you for subscribing!
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Tech Insights. Developed by Mohit Kumar. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="https://github.com/Relax-29" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/rerelax/" target="_blank">LinkedIn</a>
+                    <a href="https://www.instagram.com/re.relax_/" target="_blank">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
